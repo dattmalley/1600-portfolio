@@ -1,3 +1,33 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: aliceblue;
+    margin: 0;
+}
+
+nav {
+    background-color: red;
+    justify-content: flex-end;
+}
+
+.nav-list a:hover{
+    background-color: blue;
+}
+
+.nav-list {
+    display: flex;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+
+}
+
+#welcome-section {
+    background-color:fefefe;
 }
