@@ -7,17 +7,19 @@ body {
     margin: 0;
 }
 
-nav {
+.nav {
+    display: flex;
     background-color: red;
     justify-content: flex-end;
 }
 
-.nav-list a:hover{
-    background-color: blue;
-}
-
 .nav-list {
     display: flex;
+    margin-right: 2%;
+}
+
+.nav-list a:hover{
+    background-color: blue;
 }
 
 ul {
@@ -29,5 +31,42 @@ li {
 }
 
 #welcome-section {
-    background-color:fefefe;
+    background-color: rgb(78,75,89);
 }
+
+.projects-section {
+    text-align: center;
+    
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.projects {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
