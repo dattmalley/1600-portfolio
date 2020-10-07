@@ -1,5 +1,16 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
     box-sizing: border-box;
+    /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
@@ -14,21 +25,24 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: red;
+  background-color: #293C5C;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
 .nav-list a:hover{
-    background-color: rgb(0, 0, 255);
+    background-color: #A9BEE1;
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
 }
 
 .nav-list {
   display: flex;
   margin-right: 2rem;
-}
-
-li {
   list-style-type: none;
 }
 
@@ -39,14 +53,22 @@ li {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: rgb(68, 63, 56);
+  background-color: #4C6EA8;
   color: #fff;
+  background-image: linear-gradient(126deg, #638FDB 0%, #293C5C 75%);
+  font-size: xx-large;
 }
 
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
   background: #45567d;
+  font-size: x-large;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-grid {
@@ -73,11 +95,46 @@ a {
   flex-wrap: wrap;
 }
 
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
 .contact-details {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
 }
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: #303841;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+@media (max-width: 28.75em) {
+  .contact-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: 30em) {
+    #welcome-section {
+      background-image: linear-gradient(126deg, #a84f3c 0%, #4C6EA8 75%);
+      font-size: small;
+    }
+  }
 
 /*.project {
   background: gray;
